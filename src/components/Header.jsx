@@ -13,9 +13,9 @@ function Header() {
         padding: '2px 8px'
       }}
     >
-      <img src={hamburgerMenu} width={35} />
-      <img src={Logo} />
-      <img src={Basket} width={35} />
+      <img src={hamburgerMenu} width={35} alt="menu" />
+      <img src={Logo} alt="little lemon" />
+      <img src={Basket} width={35} alt="terminar compra" />
     </header>
   );
 }
