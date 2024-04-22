@@ -77,13 +77,13 @@ code {
 .container-bookings {
   background-color: var(--green);
   height: 90vh;
-  padding-top: 30px;
+  padding-top: 20px;
 }
 
 .input {
   display: flex;
   flex-direction: column;
-  padding: 10px 20px;
+  padding: 5px 20px;
   color: white;
   label {
     font-size: 15px;
@@ -131,6 +131,7 @@ code {
 .container-button {
   display: flex;
   flex-direction: column;
+  text-align: center;
   button {
     margin: 10px 0;
   }
@@ -138,7 +139,30 @@ code {
 
 .container-create {
   color: var(--green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.input-create {
+  display: flex;
+  width: 80%;
+  padding: 10px 0;
+  flex-direction: column;
+  color: var(--green);
+  label {
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
   input {
-    color: var(--green);
+    height: 35px;
+
+    font-size: 15px;
+    border-radius: 5px;
+    background-color: rgb(73 94 87 / 67%);
+    border: none;
+    color: white;
+    padding: 0 10px;
   }
 }

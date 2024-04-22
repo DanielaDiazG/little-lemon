@@ -18,7 +18,17 @@ const App = () => {
             element={<Bookings setBookingData={setBookingData} />}
           />
           <Route path="confirm" element={<Confirm />} />
-          <Route path="create" element={<Create />} />
+          <Route
+            path="create"
+            element={
+              <Create
+                userData={bookingData?.useData}
+                setCreateData={(data) =>
+                  setBookingData((prev) => ({ ...prev, useData: data }))
+                }
+              />
+            }
+          />
 
           {/* <Route
             path={pages.get('about').path}
