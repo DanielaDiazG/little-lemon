@@ -1,25 +1,43 @@
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import Button from '../../components/Button';
+import restauranfood from '../../icons/restauranfood.jpg';
 
 function Home({}) {
-  useEffect(() => {
-    const fetchData = async () => {
-      const date = new Date();
-      const response = await window.fetchAPI(date);
-      console.log(response);
-    };
-    fetchData();
-  }, []);
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('/bookings');
+  };
   return (
     <>
       <div
         style={{
           height: '300px',
-          backgroundColor: '#495E57'
+          backgroundColor: '#495E57',
+          padding: '10PX 20px'
         }}
       >
-        <h1 style={{ color: '#F4CE14' }}>Little Lemon</h1>
-        <h3 style={{ color: 'white' }}>Chicago</h3>
-        <spam>We are a family</spam>
+        <div>
+          <h1 style={{ color: '#F4CE14' }}>Little Lemon</h1>
+          <h3 style={{ color: 'white' }}>Chicago</h3>
+        </div>
+        <div>
+          <spam style={{ color: 'white', width: ' 200px' }}>
+            We are a family owner Mediterranean restaurant, focused on
+            traditional recipes served with a modern twist
+          </spam>
+          <img
+            src={restauranfood}
+            alt="Instagram Little Lemon"
+            width={90}
+            className="image-small"
+          />
+        </div>
+
+        <Button onClick={handleClick}>
+          <span>Reserve a table</span>
+        </Button>
       </div>
     </>
   );

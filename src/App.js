@@ -1,14 +1,25 @@
+import { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import routes from './utils/routes';
 import Layout from './components/Layout';
 import Home from './pages/Home';
+import Bookings from './pages/Bookings';
+import Confirm from './pages/Confirm';
+import Create from './pages/Create';
 
 const App = () => {
+  const [bookingData, setBookingData] = useState();
   return (
     <>
       <Layout>
         <Routes>
-          <Route path={routes.get('home').path} element={<Home />} />
+          <Route path="/" element={<Home />} />
+          <Route
+            path="bookings"
+            element={<Bookings setBookingData={setBookingData} />}
+          />
+          <Route path="confirm" element={<Confirm />} />
+          <Route path="create" element={<Create />} />
+
           {/* <Route
             path={pages.get('about').path}
             element={<UnderConstruction />}

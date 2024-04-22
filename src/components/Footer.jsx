@@ -1,5 +1,9 @@
 import { Link } from 'react-router-dom';
-import routes from '../utils/routes';
+import Logo from '../icons/Logo.svg';
+import Instagram from '../icons/Instagram.svg';
+import facebook from '../icons/facebook.svg';
+import x from '../icons/x.svg';
+import phone from '../icons/phone.svg';
 
 const contacts = [
   { icon: 'faLocationDot', info: '678 Pisa Ave, Chicago, IL 60611' },
@@ -14,13 +18,26 @@ const socials = [
   { icon: 'faYoutube', name: 'youtube' }
 ];
 
-const navLinks = Array.from(routes.values()).filter((page) => page.anchorable);
+const navLinks = [
+  { name: 'home', path: '/' },
+  { name: 'bookings', path: 'bookings' }
+];
 
 const Footer = () => {
   return (
-    <footer className="site-footer">
-      <div className="container grid">
-        <nav className="site-footer-nav">
+    <footer className="footer">
+      <div className="container-footer">
+        <Link to="/">
+          <img src={Logo} alt="Little Lemon" />
+        </Link>
+        <div>
+          <div className="footer-title">contact us</div>
+          <img src={Instagram} alt="Instagram Little Lemon" width={30} />
+          <img src={facebook} alt="Instagram Little Lemon" width={30} />
+          <img src={x} alt="Instagram Little Lemon" width={26} />
+          <img src={phone} alt="Instagram Little Lemon" width={30} />
+        </div>
+        {/* <nav className="footer-title">
           <h4>Sitemap</h4>
           <ul>
             {navLinks.map((navLink, index) => (
@@ -29,30 +46,7 @@ const Footer = () => {
               </li>
             ))}
           </ul>
-        </nav>
-        <div className="site-footer-contact">
-          <h4>Contact us</h4>
-          <address>
-            {contacts.map((contact, index) => (
-              <p key={index}>
-                {/* <FontAwesomeIcon icon={contact.icon} /> {contact.info} */}
-              </p>
-            ))}
-          </address>
-        </div>
-        <div className="site-footer-social">
-          <h4>Connect with us</h4>
-          {socials.map((social, index) => (
-            <a
-              key={index}
-              href={`https://www.${social.name}.com`}
-              target="_blank"
-              rel="noreferrer"
-            >
-              {/* <FontAwesomeIcon icon={social.icon} size="lg" /> */}
-            </a>
-          ))}
-        </div>
+        </nav> */}
       </div>
     </footer>
   );

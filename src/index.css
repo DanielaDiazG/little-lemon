@@ -1,3 +1,8 @@
+:root {
+  --green: rgb(73, 94, 87);
+  --yellow: rgb(244, 206, 20);
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +15,130 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.footer {
+  display: flex;
+  height: auto;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background-color: white;
+  box-shadow: 0 0px 21px 4px var(--green);
+  padding: 10px;
+}
+
+.container-footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  ul {
+    padding: 0 10px;
+    a {
+      color: rgb(81, 81, 81);
+      text-decoration: none;
+    }
+  }
+}
+
+.footer-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: rgb(54, 54, 54);
+}
+
+.container-info {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 5px 10px;
+  img {
+    margin-right: 10px;
+  }
+}
+
+.button {
+  height: auto;
+  border-radius: 10px;
+  border: none;
+  background-color: var(--yellow);
+  padding: 10px;
+  font-size: 15px;
+}
+
+.image-small {
+  object-fit: cover;
+  width: 150px;
+  height: 110px;
+}
+
+.container-bookings {
+  background-color: var(--green);
+  height: 90vh;
+  padding-top: 30px;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+  color: white;
+  label {
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+  input {
+    height: 35px;
+    font-size: 15px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.357);
+    border: none;
+    color: white;
+    padding: 0 10px;
+  }
+}
+
+.center-element {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.container-confirm {
+  background-color: var(--green);
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  h1 {
+    color: var(--yellow);
+  }
+  h2 {
+    color: white;
+    padding: 0 50px;
+  }
+  span {
+    color: white;
+    font-size: 12px;
+  }
+}
+
+.container-button {
+  display: flex;
+  flex-direction: column;
+  button {
+    margin: 10px 0;
+  }
+}
+
+.container-create {
+  color: var(--green);
+  input {
+    color: var(--green);
+  }
 }
